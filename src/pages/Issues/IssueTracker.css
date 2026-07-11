@@ -1,0 +1,63 @@
+.issue-container { max-width: 100%; margin: 0 auto; }
+.issue-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 24px; }
+.issue-title { font-size: 28px; font-weight: 800; color: #1f2937; }
+.issue-subtitle { color: #6b7280; font-size: 14px; margin-top: 4px; }
+
+/* Kanban Board */
+.kanban-board { display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; min-height: 70vh; overflow-x: auto; }
+@media (max-width: 1400px) { .kanban-board { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 900px) { .kanban-board { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .kanban-board { grid-template-columns: 1fr; } }
+
+.kanban-column { background: #f9fafb; border-radius: 16px; padding: 16px; }
+.column-header { display: flex; align-items: center; gap: 10px; padding-bottom: 14px; border-top: 3px solid; border-radius: 4px 4px 0 0; margin-bottom: 12px; }
+.column-title { font-weight: 700; font-size: 14px; color: #374151; }
+.column-count { margin-left: auto; background: #e5e7eb; padding: 2px 10px; border-radius: 20px; font-size: 12px; font-weight: 600; }
+
+/* Issue Cards */
+.column-cards { display: flex; flex-direction: column; gap: 10px; }
+.issue-card { background: white; border: 1px solid #f3f4f6; border-radius: 12px; padding: 14px; cursor: pointer; transition: all 0.2s; }
+.issue-card:hover { border-color: #e5e7eb; box-shadow: 0 2px 8px rgba(0,0,0,0.04); }
+.issue-card-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+.assigned-badge { color: #3b82f6; font-size: 12px; }
+.issue-card-title { font-size: 15px; font-weight: 700; color: #1f2937; margin-bottom: 6px; }
+.issue-card-desc { font-size: 12px; color: #6b7280; margin-bottom: 10px; line-height: 1.4; }
+.issue-card-footer { display: flex; justify-content: space-between; }
+.issue-meta { font-size: 11px; color: #9ca3af; display: flex; align-items: center; gap: 4px; }
+
+/* Card Actions */
+.issue-card-actions { display: flex; gap: 6px; margin-top: 10px; padding-top: 10px; border-top: 1px solid #f3f4f6; }
+.action-btn { flex: 1; padding: 6px; border: 1px solid #e5e7eb; border-radius: 6px; background: white; font-size: 11px; font-weight: 600; cursor: pointer; transition: all 0.2s; display: flex; align-items: center; justify-content: center; gap: 4px; }
+.action-btn.assign:hover { background: #dbeafe; color: #2563eb; border-color: #bfdbfe; }
+.action-btn.progress:hover { background: #ede9fe; color: #7c3aed; border-color: #ddd6fe; }
+.action-btn.resolve:hover { background: #d1fae5; color: #059669; border-color: #a7f3d0; }
+.action-btn.close:hover { background: #f3f4f6; color: #374151; border-color: #d1d5db; }
+
+.empty-column { text-align: center; padding: 30px 10px; color: #d1d5db; }
+.empty-column i { font-size: 32px; margin-bottom: 8px; }
+.empty-column p { font-size: 13px; }
+
+/* Issue Form */
+.issue-form { display: flex; flex-direction: column; gap: 16px; }
+.issue-form .form-group { display: flex; flex-direction: column; gap: 6px; }
+.issue-form .form-group label { font-size: 13px; font-weight: 600; color: #374151; display: flex; align-items: center; gap: 6px; }
+.issue-form .form-group label i { color: #7c3aed; }
+.issue-form .form-group input,
+.issue-form .form-group select,
+.issue-form .form-group textarea { padding: 10px 14px; border: 2px solid #e5e7eb; border-radius: 10px; font-size: 14px; outline: none; font-family: inherit; transition: all 0.2s; }
+.issue-form .form-group input:focus,
+.issue-form .form-group select:focus,
+.issue-form .form-group textarea:focus { border-color: #7c3aed; box-shadow: 0 0 0 3px rgba(124,58,237,0.1); }
+.issue-form .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.issue-form .form-actions { display: flex; gap: 10px; justify-content: flex-end; margin-top: 8px; }
+.spinner { width: 16px; height: 16px; border: 2px solid rgba(255,255,255,0.3); border-top-color: white; border-radius: 50%; animation: spin 0.7s linear infinite; display: inline-block; }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* Issue Detail */
+.issue-detail { display: flex; flex-direction: column; gap: 16px; }
+.detail-header { display: flex; justify-content: space-between; align-items: center; }
+.detail-header h3 { font-size: 18px; font-weight: 700; }
+.detail-desc { color: #6b7280; line-height: 1.6; }
+.detail-meta { display: flex; flex-direction: column; gap: 10px; }
+.meta-row { display: flex; justify-content: space-between; align-items: center; font-size: 14px; color: #6b7280; }
+.meta-row span:first-child { font-weight: 600; color: #374151; }

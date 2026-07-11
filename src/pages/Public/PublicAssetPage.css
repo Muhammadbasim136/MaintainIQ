@@ -1,0 +1,34 @@
+.public-container { max-width: 600px; margin: 0 auto; padding: 20px; min-height: 100vh; background: #f9fafb; }
+.public-header { background: linear-gradient(135deg, #7c3aed, #6366f1); margin: -20px -20px 20px; padding: 16px 20px; }
+.public-logo { display: flex; align-items: center; gap: 10px; color: white; font-weight: 700; font-size: 18px; }
+.public-error { text-align: center; padding: 60px 20px; }
+.error-icon { font-size: 60px; margin-bottom: 16px; }
+.public-error h2 { font-size: 24px; color: #1f2937; margin-bottom: 8px; }
+.public-error p { color: #6b7280; }
+
+.public-card { background: white; border-radius: 16px; padding: 24px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+.public-asset-header { margin-bottom: 20px; }
+.public-status { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
+.status-indicator { width: 10px; height: 10px; border-radius: 50%; }
+.status-indicator.operational { background: #10b981; }
+.status-indicator.issue-reported { background: #f59e0b; animation: pulse 2s infinite; }
+.status-indicator.under-maintenance { background: #3b82f6; animation: pulse 2s infinite; }
+.status-indicator.out-of-service { background: #ef4444; animation: pulse 1s infinite; }
+@keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.5} }
+.public-asset-header h1 { font-size: 24px; font-weight: 800; color: #1f2937; }
+.public-code { font-family: 'Courier New', monospace; color: #7c3aed; font-size: 13px; font-weight: 600; }
+
+.public-info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 24px; }
+.public-info-item { display: flex; align-items: flex-start; gap: 12px; }
+.public-info-item i { color: #7c3aed; margin-top: 3px; }
+.info-label { font-size: 11px; color: #9ca3af; text-transform: uppercase; font-weight: 600; display: block; }
+.info-value { font-size: 14px; color: #1f2937; font-weight: 500; }
+
+.report-btn { width: 100%; padding: 14px; background: linear-gradient(135deg, #f59e0b, #f97316); color: white; border: none; border-radius: 12px; font-size: 15px; font-weight: 700; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; }
+.report-success { background: #f0fdf4; color: #16a34a; padding: 12px; border-radius: 10px; text-align: center; margin-bottom: 16px; font-weight: 500; display: flex; align-items: center; justify-content: center; gap: 8px; }
+
+.recent-title { font-size: 16px; font-weight: 700; color: #1f2937; margin-bottom: 12px; }
+.recent-item { padding: 12px 0; border-bottom: 1px solid #f3f4f6; }
+.recent-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px; }
+.recent-issue-title { font-size: 14px; font-weight: 600; }
+.recent-date { font-size: 12px; color: #9ca3af; }
